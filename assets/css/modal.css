@@ -34,6 +34,17 @@
   margin-top: 2rem;
 }
 
+.modal-content .close-button {
+  font-size: 30px;
+  float: right;
+  color: #ccc;
+}
+
+.modal-content .close-button:hover {
+  color: #000;
+  cursor: pointer;
+}
+
 @keyframes open-modal {
   from {
     opacity: 0;

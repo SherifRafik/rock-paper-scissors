@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rock Paper Scissors | Game</title>
-    <script src="https://kit.fontawesome.com/6dfd2cab0e.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/modal.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <header>
-        <h1>Rock Paper Scissors</h1>
-        <button id="restart-btn" class="restart-btn">Restart game</button>
-        <div class="score">
-          <p>Player: <span id="player-score">0</span></p>
-          <p>Computer: <span id="computer-score">0</span></p>
-        </div>
-      </header>
-      <h2>Make your selection</h2>
-      <div class="choices">
-        <i id="rock" class="choice fas fa-hand-rock fa-10x"></i>
-        <i id="paper" class="choice fas fa-hand-paper fa-10x"></i>
-        <i id="scissors" class="choice fas fa-hand-scissors fa-10x"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Rock Paper Scissors | Game</title>
+  <script src="https://kit.fontawesome.com/6dfd2cab0e.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/modal.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Rock Paper Scissors</h1>
+      <button id="restart-btn" class="restart-btn">Restart game</button>
+      <div class="score">
+        <p>Player: <span id="player-score">0</span></p>
+        <p>Computer: <span id="computer-score">0</span></p>
       </div>
+    </header>
+    <h2>Make your selection</h2>
+    <div class="choices">
+      <i id="rock" class="choice fas fa-hand-rock fa-10x"></i>
+      <i id="paper" class="choice fas fa-hand-paper fa-10x"></i>
+      <i id="scissors" class="choice fas fa-hand-scissors fa-10x"></i>
     </div>
+  </div>
 
-    <div class="modal">
-      <div class="modal-content">
-        <h1 id="result"></h1>
-        <i id="computer-choice-icon" class="fas fa-10x"></i>
-        <p>Computer chose <span id="computer-choice"></span></p>
-      </div>
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h1 id="result"></h1>
+      <i id="computer-choice-icon" class="fas fa-10x"></i>
+      <p>Computer chose <span id="computer-choice"></span></p>
     </div>
+  </div>
 
-    <script src="assets/js/game.js"></script>
-  </body>
+  <script src="assets/js/game.js"></script>
+</body>
+
 </html>

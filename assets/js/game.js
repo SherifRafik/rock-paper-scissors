@@ -6,12 +6,14 @@ var computerChoiceIcon = document.getElementById("computer-choice-icon");
 var result = document.getElementById("result");
 var computerChoiceSpan = document.getElementById("computer-choice");
 var modal = document.getElementsByClassName("modal")[0];
+var modalCloseButton = document.getElementsByClassName("close-button")[0];
 
 // Object to keep track of the scores
 var scoreboard = {
   player: 0,
   computer: 0
 };
+
 
 // Play game
 function playGame(event) {
@@ -79,10 +81,11 @@ function restartGame() {
   scoreboard.computer = 0;
   playerScoreDisplay.textContent = scoreboard.player;
   computerScoreDisplay.textContent = scoreboard.computer;
+  restartButton.style.display = "none";
 }
 
 function clearModal(event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == modalCloseButton) {
     modal.style.display = "none";
     var currentIconClass = computerChoiceIcon.classList.item(2);
     computerChoiceIcon.classList.remove(currentIconClass);
@@ -101,3 +104,4 @@ restartButton.addEventListener("click", restartGame);
 
 // Event listener for clearing the modal
 window.addEventListener("click", clearModal);
+modalCloseButton.addEventListener("click", clearModal);
