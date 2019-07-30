@@ -13,15 +13,16 @@ var scoreboard = {
   computer: 0
 };
 
+// Play game
 function playGame(event) {
   restartButton.style.display = "inline-block";
   var playerChoice = event.target.id;
   var computerChoice = getComputerChoice();
   var winner = getWinner(playerChoice, computerChoice);
-  console.log(playerChoice, computerChoice, winner);
   updateScore(winner, computerChoice);
 }
 
+// Get computer's choice
 function getComputerChoice() {
   var randomNumber = Math.random() * 3;
   var computerChoice = "";
@@ -31,6 +32,7 @@ function getComputerChoice() {
   return computerChoice;
 }
 
+// Get game winner
 function getWinner(playerChoice, computerChoice) {
   var winner = "";
   if (playerChoice === computerChoice) winner = "draw";
@@ -47,6 +49,7 @@ function getWinner(playerChoice, computerChoice) {
   return winner;
 }
 
+// Updates the current score according to the winner
 function updateScore(winner, computerChoice) {
   if (winner === "player") {
     scoreboard.player++;
@@ -70,11 +73,22 @@ function updateScore(winner, computerChoice) {
   modal.style.display = "block";
 }
 
+//Restarts the game
 function restartGame() {
   scoreboard.player = 0;
   scoreboard.computer = 0;
   playerScoreDisplay.textContent = scoreboard.player;
   computerScoreDisplay.textContent = scoreboard.computer;
+}
+
+function clearModal(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    var currentIconClass = computerChoiceIcon.classList.item(2);
+    computerChoiceIcon.classList.remove(currentIconClass);
+    result.classList.remove("text-lose");
+    result.classList.remove("text-win");
+  }
 }
 
 // Event listeners for the icons
@@ -85,12 +99,5 @@ for (var i = 0; i < choices.length; i++) {
 // Event listener for the restart-game button
 restartButton.addEventListener("click", restartGame);
 
-window.addEventListener("click", function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    var currentIconClass = computerChoiceIcon.classList.item(2);
-    computerChoiceIcon.classList.remove(currentIconClass);
-    result.classList.remove("text-lose");
-    result.classList.remove("text-win");
-  }
-});
+// Event listener for clearing the modal
+window.addEventListener("click", clearModal);

@@ -75,7 +75,6 @@ h2 {
   cursor: pointer;
 }
 
-
 /*If the browser window is 700px or smaller*/
 @media(max-width: 700px) {
   .choice {
