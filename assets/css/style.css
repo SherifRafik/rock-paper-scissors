@@ -13,7 +13,6 @@ body {
   --light-color: #f4f4f4;
   --lose-color: #dc3545;
   --win-color: #28a745;
-  --modal-animation-time: 1s;
 }
 
 .container {
@@ -89,4 +88,13 @@ h2 {
   .choice {
     font-size: 80px;
   }
+}
+
+/* Utility Classes */
+.text-win {
+  color: var(--win-color);
+}
+
+.text-lose {
+  color: var(--lose-color);
 }
