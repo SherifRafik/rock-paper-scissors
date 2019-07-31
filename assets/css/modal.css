@@ -45,6 +45,20 @@
   cursor: pointer;
 }
 
+@media(max-width: 400px) {
+  .modal-content {
+    width: 300px;
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 320px) {
+  .modal-content {
+    width: 250px;
+    font-size: 1rem;
+  }
+}
+
 @keyframes open-modal {
   from {
     opacity: 0;
