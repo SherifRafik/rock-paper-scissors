@@ -1,4 +1,4 @@
-# rock-papers-scissors
+# rock-paper-scissors
   * A simple rock paper scissors game 
   
   ### Technologies used:
